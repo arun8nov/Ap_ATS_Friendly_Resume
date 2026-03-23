@@ -1,0 +1,173 @@
+\documentclass[letterpaper,10pt]{article}
+
+%-------- ESSENTIAL PACKAGES ONLY (ATS-safe) --------
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-------- COLORS --------
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{headingblue}{HTML}{0E5484}
+
+%-------- MARGINS --------
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.6in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------- SECTION FORMATTING --------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries\color{headingblue}
+}{}{0em}{}[\color{airforceblue}\titlerule\vspace{-5pt}]
+
+%-------- CUSTOM COMMANDS --------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & \textbf{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%============================================================
+\begin{document}
+
+%-------- HEADER --------
+\begin{center}
+  {\huge\textbf{Arunprakash B}}\\[4pt]
+  {\large\color{airforceblue}\textbf{Data Analyst}}\\[5pt]
+  \small
+  +91-9791157153 ~\textbar~
+  \href{mailto:arunbabuprakash@gmail.com}{arunbabuprakash@gmail.com} ~\textbar~
+  \href{https://www.linkedin.com/in/arun8nov}{linkedin.com/in/arun8nov} ~\textbar~
+  \href{https://github.com/arun8nov}{github.com/arun8nov} ~\textbar~
+  \href{https://arun8nov.notion.site/Hey-there-I-am-Arunprakash-B-223fe4a17f8a80faa5abee1f246a06f1}{Portfolio}
+\end{center}
+\vspace{-10pt}
+
+%-------- SUMMARY --------
+\section{Summary}
+\begin{itemize}[leftmargin=0in, label={}]
+  \item\normalsize{
+    Results-driven Data Analyst with demonstrated expertise in \textbf{SQL, Python, Power BI, and Databricks}, specialising in transforming complex, high-volume datasets into actionable business intelligence. Proven ability to architect and deliver scalable \textbf{ETL pipelines} using PySpark and \textbf{Medallion Architecture} (Bronze--Silver--Gold), reducing data processing friction and improving reporting accuracy. Adept at building end-to-end analytics solutions---from raw ingestion to executive dashboards---that directly support strategic, data-driven decision-making across cross-functional teams.
+  }
+\end{itemize}
+\vspace{-14pt}
+
+%-------- TECHNICAL SKILLS --------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+  \small\item{
+    \textbf{Languages \& Databases:} Python, SQL (MySQL, Spark SQL), PySpark \\[1pt]
+    \textbf{BI \& Analytics Tools:} Power BI, Tableau, Looker Studio, Streamlit, Google Sheets, Excel (Advanced), Databricks, Git, Jupyter \\[1pt]
+    \textbf{Core Competencies:} ETL Pipeline Development, Medallion Architecture, Exploratory Data Analysis, Statistical Modelling, Predictive Analytics, Machine Learning (Random Forest, XGBoost, LSTM, BERT), KPI Dashboarding, Data Cleaning \& Validation
+  }
+\end{itemize}
+\vspace{-14pt}
+
+%-------- WORK EXPERIENCE --------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Data Associate}{Nov 2025 -- Present}
+    {Hurix Systems Private Limited, Chennai}{}
+  \resumeItemListStart
+    \resumeItem{Engineered structured validation workflows for multimodal datasets (text, image, audio), measurably improving data reliability and accelerating AI model optimisation cycles.}
+    \resumeItem{Collaborated with ML engineers to assess and refine training data quality, upholding consistent benchmark standards that directly enhanced downstream model accuracy.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Data Analyst Intern}{Jan 2025 -- Mar 2025}
+    {Unified Mentor Pvt. Ltd, Remote}{}
+  \resumeItemListStart
+    \resumeItem{Designed and deployed \textbf{5+ interactive dashboards} in Power BI, Tableau, and Python to monitor sales funnels, measure campaign KPIs, and surface lead conversion opportunities for business stakeholders. \href{https://github.com/arun8nov/Unified-Mentor-Intern-Projects}{\color{headingblue}\underline{GitHub}}}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {IT Support \& Data Entry Executive}{Jun 2020 -- Nov 2025}
+    {GodSend Technology, Virudhunagar}{}
+  \resumeItemListStart
+    \resumeItem{Administered high-accuracy data entry and records management for billing, accounting, and reporting systems in Excel, while ensuring consistent system uptime and end-to-end data integrity.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Production Engineer}{May 2019 -- Mar 2020}
+    {Flex India Pvt Ltd, Chennai}{}
+  \resumeItemListStart
+    \resumeItem{Oversaw production workflow reporting and coordinated cross-functionally with inventory and logistics teams to sustain on-time operational efficiency targets.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+%-------- PROJECTS --------
+\section{Projects}
+\resumeItemListStart
+
+  \resumeItem{\textbf{E-Commerce Data Lakehouse} --- Architected a production-grade Medallion pipeline (Bronze--Silver--Gold) on \textbf{Databricks} using PySpark; automated ingestion of raw transactional data through multi-stage transformation to analytics-ready business aggregates. \href{https://github.com/arun8nov/E_Comm}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{JioHotstar Ad Vision} --- Engineered an end-to-end ad intelligence platform using \textbf{YOLO} (85\% detection accuracy); built ETL pipelines with MySQL, Plotly dashboards, and a \textbf{GenAI NL-to-SQL} Streamlit chatbot for real-time brand exposure analytics. \href{https://github.com/arun8nov/JioHotstar-Ad-Vision}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{Productivity Tracking System} --- Developed a high-throughput KPI engine processing \textbf{10,000+ daily records}, delivering real-time workforce performance insights that enabled faster, evidence-based management decisions.}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{AI Echo --- NLP Sentiment Analysis} --- Built an end-to-end sentiment classification system leveraging \textbf{LSTM, BERT, and Transformer} models; integrated SMOTE for class imbalance and deployed Streamlit/Dash dashboards for real-time customer opinion analytics. \href{https://github.com/arun8nov/AI-Echo-NLP-Sentimental-Analysis}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{Multiple Disease Prediction} --- Developed a clinical ML system for simultaneous prediction of CKD, Chronic Liver Disease, and Parkinson's from patient lab data; achieved up to \textbf{99\% model accuracy} and delivered results through an intuitive Streamlit interface. \href{https://github.com/arun8nov/Multiple-Disease-prediction}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{Employee Attrition Prediction} --- Delivered an HR analytics solution using \textbf{Random Forest \& XGBoost} (85\%+ accuracy); identified primary churn drivers and visualised findings through interactive dashboards, directly informing retention strategy.}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{TN Rainfall Data Automation} --- Designed a scalable ETL pipeline for large-scale meteorological data ingestion, cleaning, and transformation; surfaced real-time rainfall trend analysis via Streamlit dashboard to support agricultural planning decisions. \href{https://github.com/arun8nov/TN_RainfallData_Automation}{\color{headingblue}\underline{GitHub}}}
+
+\resumeItemListEnd
+\vspace{-14pt}
+
+%-------- EDUCATION --------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Bachelor of Engineering --- Electronics and Instrumentation}{2018}
+    {Sri Sairam Engineering College, Chennai}{}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+%-------- CERTIFICATIONS --------
+\section{Certifications}    
+\begin{itemize}[leftmargin=0in, label={}]
+  \item\normalsize{
+    \textbf{Data Science Professional Certificate} --- GUVI, IIT-M Research Park (2024): Comprehensive training in statistical analysis, machine learning pipelines, and Python-based data engineering workflows.
+  }
+\end{itemize}
+
+\end{document}
