@@ -12,7 +12,7 @@ client = OpenAI(
 
 MODEL = "meta/llama-3.1-8b-instruct"
 
-NVIDIA_API_KEY=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
+
 
 def call_llm(system_prompt: str, user_prompt: str, temperature: float = 0.4) -> str:
     completion = client.chat.completions.create(
