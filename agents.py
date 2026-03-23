@@ -1,4 +1,5 @@
 import os
+import glob
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -24,15 +25,28 @@ def call_llm(system_prompt: str, user_prompt: str, temperature: float = 0.4) -> 
         max_tokens=16384,
         stream=True
     )
-
     full_response = ""
     for chunk in completion:
         if not chunk.choices:
             continue
         if chunk.choices[0].delta.content is not None:
             full_response += chunk.choices[0].delta.content
-
     return full_response
+
+
+# ──────────────────────────────────────────────
+# LOAD ALL RESUMES FROM /resumes FOLDER
+# ──────────────────────────────────────────────
+def load_all_resumes(folder: str = "resumes") -> dict:
+    """Returns {filename: latex_content} for all .tex files in folder"""
+    resumes = {}
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+    for path in glob.glob(os.path.join(folder, "*.tex")):
+        name = os.path.basename(path)
+        with open(path, "r", encoding="utf-8") as f:
+            resumes[name] = f.read()
+    return resumes
 
 
 # ──────────────────────────────────────────────
@@ -65,7 +79,6 @@ Return your response in this EXACT format:
 ## RECOMMENDED CHANGES
 <bullet points of specific changes to make>
 """
-
     user_prompt = f"""JOB DESCRIPTION:
 {jd_text}
 
@@ -79,41 +92,94 @@ Analyze the resume against the JD and provide the keyword analysis."""
 
 
 # ──────────────────────────────────────────────
-# AGENT 2 — ATS Resume Optimizer
+# AGENT 3 — Multi-Resume Assembler
 # ──────────────────────────────────────────────
-def agent_resume_optimizer(jd_text: str, resume_latex: str, keyword_analysis: str) -> dict:
-    system_prompt = """You are an expert LaTeX resume writer and ATS optimization specialist.
+def agent_resume_assembler(jd_text: str, resumes: dict, keyword_analysis: str) -> dict:
+    """
+    Reads all resumes, picks the best content from each section
+    across all resumes based on JD, assembles one master resume
+    in the same LaTeX format as main.tex
+    """
 
-Your task is to optimize a LaTeX resume for a specific job description.
+    # Build resume bundle text
+    resume_bundle = ""
+    for filename, content in resumes.items():
+        resume_bundle += f"\n\n{'='*60}\nRESUME FILE: {filename}\n{'='*60}\n{content}"
+
+    system_prompt = """You are an expert resume writer and LaTeX specialist.
+
+You have multiple versions of a candidate's resume for different roles.
+Your job is to read all of them and assemble ONE best resume tailored to the Job Description.
 
 STRICT RULES:
 1. Return ONLY valid LaTeX code — no explanation, no markdown, no commentary
-2. Do NOT change the overall structure or layout of the resume
-3. Keep it to ONE page — remove less relevant content if needed
-4. Update the job title/headline to match the JD
-5. Add missing critical keywords naturally into existing bullet points
-6. Remove keywords irrelevant to this specific JD
-7. Keep all section headers the same
-8. Do NOT add new sections
-9. Make it ATS parsable — no tables, no columns in critical sections, no graphics for text
-10. Use standard LaTeX resume formatting only
+2. Use the SAME LaTeX structure and formatting as the input resumes
+3. Pick the BEST and MOST RELEVANT content from each resume section based on the JD
+4. Combine skills, experiences, and achievements that best match the JD
+5. Keep it to ONE page
+6. Update the job title/headline to exactly match the JD role
+7. Add missing critical keywords naturally
+8. Do NOT invent or fabricate any experience or skills
+9. Only use content that actually exists across the provided resumes
+10. Output must start with \\documentclass
 """
 
     user_prompt = f"""JOB DESCRIPTION:
 {jd_text}
 
-ORIGINAL RESUME (LaTeX):
-{resume_latex}
-
-KEYWORD ANALYSIS FROM AGENT 1:
+KEYWORD ANALYSIS:
 {keyword_analysis}
 
-Now produce the optimized LaTeX resume code following all the rules strictly.
+ALL RESUME VERSIONS:
+{resume_bundle}
+
+Now assemble the best single LaTeX resume by picking the strongest matching content from all the resumes above.
 Return ONLY the LaTeX code starting from \\documentclass."""
 
     result = call_llm(system_prompt, user_prompt, temperature=0.3)
 
-    # Clean up if model wraps in markdown
+    # Clean up markdown fences if any
+    if "```latex" in result:
+        result = result.split("```latex")[1].split("```")[0].strip()
+    elif "```" in result:
+        result = result.split("```")[1].split("```")[0].strip()
+
+    return {"latex": result}
+
+
+# ──────────────────────────────────────────────
+# AGENT 2 — ATS Resume Optimizer (final polish)
+# ──────────────────────────────────────────────
+def agent_resume_optimizer(jd_text: str, resume_latex: str, keyword_analysis: str) -> dict:
+    system_prompt = """You are an expert LaTeX resume writer and ATS optimization specialist.
+
+Your task is to do a final polish on a LaTeX resume for a specific job description.
+
+STRICT RULES:
+1. Return ONLY valid LaTeX code — no explanation, no markdown, no commentary
+2. Do NOT change the overall structure or layout
+3. Keep it to ONE page
+4. Ensure job title/headline matches the JD
+5. Verify all critical keywords are present
+6. Make it fully ATS parsable — no tables for critical info, no graphics for text
+7. Keep all section headers the same
+8. Do NOT add new sections
+9. Output must start with \\documentclass
+"""
+
+    user_prompt = f"""JOB DESCRIPTION:
+{jd_text}
+
+ASSEMBLED RESUME (LaTeX):
+{resume_latex}
+
+KEYWORD ANALYSIS:
+{keyword_analysis}
+
+Do a final ATS optimization pass and return the polished LaTeX code."""
+
+    result = call_llm(system_prompt, user_prompt, temperature=0.3)
+
     if "```latex" in result:
         result = result.split("```latex")[1].split("```")[0].strip()
     elif "```" in result:

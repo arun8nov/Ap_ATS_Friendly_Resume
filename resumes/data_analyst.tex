@@ -1,0 +1,298 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}%\setmainfont{Times New Roman}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% \usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{cochineal}
+% \usepackage{fourier}
+
+% \usepackage{fontspec}
+% \usepackage{polyglossia}
+% \setmainlanguage{german}
+% \setmainfont{Times New Roman}
+
+% serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSingleSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------\usepackage{fontspec}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\begin{center}
+    {\huge Arunprakash B} \\ \vspace{2pt} 
+    {+91-9791157153} ~ 
+    \small{}
+    \href{https://arun8nov.notion.site/Hey-there-I-am-Arunprakash-B-223fe4a17f8a80faa5abee1f246a06f1?pvs=74}{\color{blue}{Portfolio}} ~ 
+    \small{}
+    \href{mailto:arunbabuprakash@gmail.com}{\color{blue}{arunbabuprakash@gmail.com}} ~ 
+    \small{}
+    \href{https://www.linkedin.com/in/arun8nov}{ \color{blue}{linkedin.com/in/arun8nov}}  ~
+    \small{}
+    \href{https://github.com/arun8nov}{ \color{blue}{github.com/arun8nov}} ~
+    \vspace{-7pt}
+    
+\end{center}
+
+%-----------Executive Summary---------------
+
+\section{\color{airforceblue}EXECUTIVE SUMMARY}
+\begin{itemize}[leftmargin=0in, label={}]
+
+     {\item{
+     { \normalsize
+     {Data Analyst with hands-on experience in SQL, Python, Power BI, and Databricks. Experienced in building scalable ETL pipelines using PySpark and implementing Medallion Architecture (Bronze, Silver, Gold layers) for structured data processing. Skilled in data cleaning, transformation, dashboard development, and generating actionable insights to support business decision-making. Strong understanding of data modeling, KPI tracking, and performance analytics.}} \\
+     % copy and paste above textbf block to add more    
+     }}
+     
+ \end{itemize}
+      
+\vspace{-18pt}
+
+%-----------EDUCATION-----------
+\section{\color{airforceblue}EDUCATION}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Bachelor of Engineering in Electronics and Instrumentation}{2019}
+      {Sri Sairam Engineering College, Chennai}{}
+      
+  \resumeSubHeadingListEnd
+  \vspace{-18pt}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{\color{airforceblue}TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+ 
+    \small{\item{
+     \textbf{\normalsize{Programming \& Database :}}{ \normalsize{Python, SQL (MySQL, Spark SQL), PySpark}} \\
+      \vspace{1.2pt}
+      
+     \textbf{\normalsize{BI \& Tools :}}{ \normalsize{ Power BI, Tableau, Excel Advanced, Google Sheet, Looker Studio, Streamlit, Databricks }} \\
+      \vspace{1.2pt}
+      
+     \textbf{\normalsize{Techniques :}}{ \normalsize{ETL Pipeline Development, Medallion Architecture (Bronze–Silver–Gold), Data Cleaning \& Validation, Data Transformation, Exploratory Data Analysis (EDA), Data Analytics, Business Insights, Statistical Modeling, Dashboarding, Predictive Analytics, Machine Learning Algorithms }}
+
+     % copy and paste above textbf block to add more 
+     }}
+
+     
+ \end{itemize}
+ 
+ \vspace{-20pt}
+ 
+ %-----------EXPERIENCE-----------
+ 
+\section{\color{airforceblue}WORK EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Associate}{} 
+      {Hurix Systems Private Limited, Chennai}{Nov 2025 - Present}
+      \resumeItemListStart
+            \resumeItem{\normalsize{Improved data reliability through structured cleaning and validation processes, enabling accurate reporting and analytical outputs.}}
+            \resumeItem{\normalsize{Assessed and refined multimodal datasets to support AI model optimization and maintain consistent quality benchmarks.}} 
+            \vspace{-0.5pt}
+      \resumeItemListEnd  
+    \resumeSubheading
+      {Data Analyst Intern}{} 
+      {Unified Mentor Pvt. Ltd, Remote}{01/2025 - 03/2025}
+      \resumeItemListStart
+            \resumeItem{\normalsize{{Designed interactive dashboards and data models using Power BI, Tableau, and Python to track sales funnels, analyze campaign performance metrics, and identify opportunities to improve lead conversion rates.} \href{https://github.com/arun8nov/Unified-Mentor-Intern-Projects}{\color{blue}\underline{GitHub}}}}   
+            \vspace{-0.5pt}
+      \resumeItemListEnd 
+      
+    \resumeSubheading
+      {IT Support and Data Entry Executive}{} 
+      {GodSend Technology, Virudhunagar}{06/2020 - 11/2025}
+      \resumeItemListStart
+            \resumeItem{\normalsize{Performed accurate data entry and maintained organized records for billing, accounting and reporting systems using Excel}}
+            \resumeItem{\normalsize{Provided IT support for computer systems and software while ensuring data consistency.}}   
+            \vspace{-0.5pt}
+      \resumeItemListEnd  
+
+    \resumeSubheading
+      {Production Engineer}{} 
+      {Flex India Pvt Ltd, Chennai}{05/2019 — 03/2020}
+      \resumeItemListStart
+            \resumeItem{\normalsize{Managed production workflow and reporting, collaborating with inventory and logistics teams.}}  
+      \resumeItemListEnd  
+
+    % copy and paste above resumeSubheading block to add more 
+  \resumeSubHeadingListEnd
+\vspace{-20pt}
+
+
+
+ %-----------PROJECTS-----------
+\section{\color{airforceblue}PROJECTS}    
+    \resumeItemListStart
+    
+        \vspace{0.5pt}
+        
+        \resumeItem{\normalsize{\textbf{Productivity Tracking System :}, Developed a high-volume productivity tracking solution handling 10,000+ daily records, providing real-time KPI insights that enhanced workforce performance analysis and management decision-making.} \href{}{\color{blue}\underline{}}}
+        \vspace{-5pt}
+        
+        \resumeItem{\normalsize{\textbf{JioHotstar Ad Vision}, Engineered an end-to-end ad recognition and analytics platform using YOLO, converting video-based brand exposures into structured datasets via ETL pipelines and MySQL, and enabling real-time performance tracking through interactive dashboards and a Streamlit-based NL-to-SQL chatbot.} \href{https://github.com/arun8nov/JioHotstar-Ad-Vision}{\color{blue}\underline{GitHub}}}
+        \vspace{-5pt}
+        
+        \resumeItem{\normalsize{\textbf{TN Rainfall Data Automation}, Designed and implemented a scalable rainfall analytics pipeline to ingest, clean, and transform high-volume meteorological data, delivering real-time trend analysis through an interactive Streamlit dashboard for agricultural decision support..} \href{https://github.com/arun8nov/TN_RainfallData_Automation}{\color{blue}\underline{GitHub}}}
+        \vspace{-5pt}
+
+        \resumeItem{\normalsize{\textbf{India Agricultural Data Analysis}, Conducted in-depth analysis of Indian agricultural datasets focused on crop production and weather patterns, delivering actionable insights through statistical analysis and Power BI dashboards to support agricultural planning.} \href{https://github.com/arun8nov/India-AgriData}{\color{blue}\underline{GitHub}}}
+        \vspace{-5pt}
+        
+        \resumeItem{\normalsize{\textbf{Employee Attrition \& Performance Prediction Dashboard}, Developed an end-to-end employee attrition analytics solution leveraging Random Forest and XGBoost models, achieving 85\%+ prediction accuracy and identifying key churn drivers to support data-driven HR decision-making through interactive dashboards.} 
+        \href{https://github.com/arun8nov/Employee_Attrition}{\color{blue}\underline{GitHub}}}
+        
+        % copy and paste above resumeItem block to add more 
+        
+    \resumeItemListEnd  
+   
+ \vspace{-12pt}
+ 
+\section{\color{airforceblue}CERTIFICATIONS}    
+    \resumeItemListStart
+    
+        \vspace{0.5pt}
+        
+        \resumeItem{\normalsize{\textbf{Data Science Certified :}  (GUVI – IIT-M RP) with practical analytics and ML expertise.} \href{https://www.zenclass.in/certificateDownload/cQt5WRFi58FKT6Vf?download=true}{\color{blue}\underline{Link}}}
+        \vspace{-5pt}
+
+       
+        
+    \resumeItemListEnd 
+
+\end{document}

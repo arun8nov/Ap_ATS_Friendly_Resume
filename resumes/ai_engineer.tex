@@ -1,0 +1,160 @@
+\documentclass[letterpaper,10pt]{article}
+
+%-------- ESSENTIAL PACKAGES ONLY (ATS-safe) --------
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-------- COLORS --------
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{headingblue}{HTML}{0E5484}
+
+%-------- MARGINS --------
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.6in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------- SECTION FORMATTING --------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries\color{headingblue}
+}{}{0em}{}[\color{airforceblue}\titlerule\vspace{-5pt}]
+
+%-------- CUSTOM COMMANDS --------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & \textbf{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%============================================================
+\begin{document}
+
+%-------- HEADER --------
+\begin{center}
+  {\huge\textbf{Arunprakash B}}\\[4pt]
+  {\large\color{airforceblue}\textbf{AI / ML Engineer}}\\[5pt]
+  \small
+  +91-9791157153 ~\textbar~
+  \href{mailto:arunbabuprakash@gmail.com}{arunbabuprakash@gmail.com} ~\textbar~
+  \href{https://www.linkedin.com/in/arun8nov}{linkedin.com/in/arun8nov} ~\textbar~
+  \href{https://github.com/arun8nov}{github.com/arun8nov} ~\textbar~
+  \href{https://arun8nov.notion.site/Hey-there-I-am-Arunprakash-B-223fe4a17f8a80faa5abee1f246a06f1}{Portfolio}
+\end{center}
+\vspace{-10pt}
+
+%-------- SUMMARY --------
+\section{Summary}
+\begin{itemize}[leftmargin=0in, label={}]
+  \item\normalsize{
+    Aspiring AI/ML Engineer with hands-on experience building and deploying \textbf{machine learning and deep learning models} across NLP, computer vision, and predictive analytics domains. Proficient in \textbf{Python, Scikit-learn, TensorFlow, and Transformers (BERT, LSTM)}, with practical exposure to \textbf{model training, evaluation, and deployment} via Streamlit. Experienced in constructing \textbf{end-to-end ML pipelines} --- from data ingestion and feature engineering to model optimisation and inference --- and in processing high-volume datasets using \textbf{PySpark and Databricks}. Passionate about building intelligent systems that generate measurable real-world impact.
+  }
+\end{itemize}
+\vspace{-14pt}
+
+%-------- TECHNICAL SKILLS --------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+  \small\item{
+    \textbf{Languages \& Frameworks:} Python, SQL, PySpark, Scikit-learn, TensorFlow, Keras, PyTorch (basic), Hugging Face Transformers \\[1pt]
+    \textbf{ML \& AI:} Supervised \& Unsupervised Learning, NLP (BERT, LSTM, Sentiment Analysis), Computer Vision (YOLO), Deep Learning, Feature Engineering, Model Evaluation \& Tuning, GenAI, SMOTE \\[1pt]
+    \textbf{Data \& MLOps Tools:} Databricks, PySpark, ETL Pipelines, Streamlit, Power BI, Jupyter, Git, MySQL, Excel
+  }
+\end{itemize}
+\vspace{-14pt}
+
+%-------- WORK EXPERIENCE --------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Data Associate --- AI/ML Team}{Nov 2025 -- Present}
+    {Hurix Systems Private Limited, Chennai}{}
+  \resumeItemListStart
+    \resumeItem{Curated and validated \textbf{multimodal training datasets} (text, image, audio) by engineering structured quality-assurance workflows, directly accelerating \textbf{AI model optimisation} cycles and improving benchmark accuracy.}
+    \resumeItem{Partnered with ML engineers to assess model outputs, identify data quality gaps, and refine \textbf{training data pipelines} --- improving downstream model performance across iterative evaluation cycles.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Data Analyst Intern}{Jan 2025 -- Mar 2025}
+    {Unified Mentor Pvt. Ltd, Remote}{}
+  \resumeItemListStart
+    \resumeItem{Developed \textbf{Python-based data models and analytical pipelines} to extract insights from sales and campaign datasets; deployed \textbf{5+ interactive dashboards} in Power BI and Tableau for business stakeholder reporting. \href{https://github.com/arun8nov/Unified-Mentor-Intern-Projects}{\color{headingblue}\underline{GitHub}}}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {IT Support \& Data Entry Executive}{Jun 2020 -- Nov 2025}
+    {GodSend Technology, Virudhunagar}{}
+  \resumeItemListStart
+    \resumeItem{Maintained structured data records and implemented process improvements that enhanced data accuracy and operational efficiency across billing and reporting systems.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+%-------- PROJECTS --------
+\section{Projects}
+\resumeItemListStart
+
+  \resumeItem{\textbf{AI Echo --- NLP Sentiment Analysis} --- Engineered an end-to-end \textbf{NLP pipeline} using \textbf{LSTM, BERT, and Hugging Face Transformers} for multi-class sentiment classification; applied SMOTE for class imbalance handling, performed text preprocessing (tokenisation, lemmatisation, stopword removal), and deployed real-time inference via \textbf{Streamlit and Dash} dashboards. \href{https://github.com/arun8nov/AI-Echo-NLP-Sentimental-Analysis}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{JioHotstar Ad Vision} --- Built a \textbf{computer vision} pipeline using \textbf{YOLO} for brand logo detection in cricket broadcast video (85\% accuracy); designed end-to-end data flow from frame extraction through ETL to MySQL, and delivered a \textbf{GenAI NL-to-SQL} chatbot for self-serve analytics via Streamlit. \href{https://github.com/arun8nov/JioHotstar-Ad-Vision}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{Multiple Disease Prediction} --- Developed a \textbf{multi-class clinical ML system} predicting CKD, Chronic Liver Disease, and Parkinson's from patient lab data using Logistic Regression and Random Forest; performed \textbf{feature engineering, EDA, and model tuning} to achieve up to \textbf{99\% accuracy}, deployed via Streamlit. \href{https://github.com/arun8nov/Multiple-Disease-prediction}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{Employee Attrition Prediction} --- Built an end-to-end \textbf{classification pipeline} using \textbf{Random Forest \& XGBoost} (85\%+ accuracy); engineered features from HR datasets, interpreted SHAP-style churn drivers, and visualised model insights through interactive dashboards to inform retention strategy.}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{E-Commerce Data Lakehouse} --- Architected a \textbf{scalable ML-ready data pipeline} on \textbf{Databricks} using PySpark and Medallion Architecture (Bronze--Silver--Gold); automated ingestion and transformation of raw transactional data into feature-ready aggregates for downstream model consumption. \href{https://github.com/arun8nov/E_Comm}{\color{headingblue}\underline{GitHub}}}
+
+\resumeItemListEnd
+\vspace{-14pt}
+
+%-------- EDUCATION --------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Bachelor of Engineering --- Electronics and Instrumentation}{2019}
+    {Sri Sairam Engineering College, Chennai}{}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+%-------- CERTIFICATIONS --------
+\section{Certifications}
+\begin{itemize}[leftmargin=0in, label={}]
+  \item\normalsize{
+    \textbf{Data Science Professional Certificate} --- GUVI, IIT-M Research Park (2024): Practical training in machine learning algorithms, deep learning, NLP pipelines, and Python-based model development workflows.
+  }
+\end{itemize}
+
+\end{document}
