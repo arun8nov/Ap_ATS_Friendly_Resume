@@ -1,0 +1,24 @@
+https://github.com/arun8nov/TN_RainfallData_Automation — Tamil Nadu rainfall data automation pipeline in Python
+https://github.com/arun8nov/E_Comm — E-Commerce data analysis using Jupyter Notebook
+https://github.com/arun8nov/GreenHub-Farmer — Agricultural data analysis and visualization
+https://github.com/arun8nov/Data_Bricks_Practice — Databricks practice notebooks
+https://github.com/arun8nov/Code_Proficiency_Practice — Python coding proficiency exercises
+https://github.com/arun8nov/Agents_Building — AI agent building experiments in Jupyter
+https://github.com/arun8nov/Police_SecureCheck — Police verification system built in Python
+https://github.com/arun8nov/JioHotstar-Ad-Vision — Ad analytics and vision project using Jupyter
+https://github.com/arun8nov/SQL_Practice — SQL practice queries and exercises
+https://github.com/arun8nov/CareConnect — Healthcare connectivity project
+https://github.com/arun8nov/Pytorch-Practice — PyTorch deep learning practice
+https://github.com/arun8nov/Guvi_Data_Analysis_JD — Data analysis project for Guvi
+https://github.com/arun8nov/Deloitte-Daikibo-s-Telementray — Deloitte telemetry data analysis
+https://github.com/arun8nov/AI-Echo-NLP-Sentimental-Analysis — NLP sentiment analysis project
+https://github.com/arun8nov/AI_ECHO — AI Echo chatbot/assistant project
+https://github.com/arun8nov/India-AgriData — India agriculture data analysis
+https://github.com/arun8nov/Employee_Attrition — Employee attrition prediction using ML
+https://github.com/arun8nov/Multiple-Disease-prediction — Multiple disease prediction using ML
+https://github.com/arun8nov/GOAT-Findings — Data analysis and findings project
+https://github.com/arun8nov/coffee_health — Coffee and health data analysis
+https://github.com/arun8nov/Chennai_House_Price_predict — Chennai house price prediction ML model
+https://github.com/arun8nov/TN_Veg — Tamil Nadu vegetable price data analysis
+https://github.com/arun8nov/Student_Performance — Student performance analysis
+https://github.com/arun8nov/CKD_ML_Pread — Chronic kidney disease ML prediction
