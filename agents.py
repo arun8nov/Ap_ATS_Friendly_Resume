@@ -152,9 +152,10 @@ Return ONLY the LaTeX code starting from \\documentclass."""
 # AGENT 2 — ATS Resume Optimizer (final polish)
 # ──────────────────────────────────────────────
 def agent_resume_optimizer(jd_text: str, resume_latex: str, keyword_analysis: str) -> dict:
-    system_prompt = """You are an expert LaTeX resume writer and ATS optimization specialist.
+    system_prompt = f"""You are an expert LaTeX resume writer and ATS optimization specialist.
 
-Your task is to do a final polish on a LaTeX resume for a specific job description.
+You strictly follow these professional resume rules:
+{open("RESUME_RULES.md", "r", encoding="utf-8").read()}
 
 STRICT RULES:
 1. Return ONLY valid LaTeX code — no explanation, no markdown, no commentary
