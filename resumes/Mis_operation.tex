@@ -1,0 +1,159 @@
+\documentclass[letterpaper,10pt]{article}
+
+%-------- ESSENTIAL PACKAGES ONLY (ATS-safe) --------
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-------- COLORS --------
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{headingblue}{HTML}{0E5484}
+
+%-------- MARGINS --------
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.6in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------- SECTION FORMATTING --------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries\color{headingblue}
+}{}{0em}{}[\color{airforceblue}\titlerule\vspace{-5pt}]
+
+%-------- CUSTOM COMMANDS --------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & \textbf{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%============================================================
+\begin{document}
+
+%-------- HEADER --------
+\begin{center}
+  {\huge\textbf{Arunprakash B}}\\[4pt]
+  {\large\color{airforceblue}\textbf{MIS Operations Executive}}\\[5pt]
+  \small
+  +91-9791157153 ~\textbar~
+  \href{mailto:arunbabuprakash@gmail.com}{arunbabuprakash@gmail.com} ~\textbar~
+  \href{https://www.linkedin.com/in/arun8nov}{linkedin.com/in/arun8nov} ~\textbar~
+  \href{https://github.com/arun8nov}{github.com/arun8nov} ~\textbar~
+  \href{https://arun8nov.notion.site/Hey-there-I-am-Arunprakash-B-223fe4a17f8a80faa5abee1f246a06f1}{Portfolio}
+\end{center}
+\vspace{-10pt}
+
+%-------- SUMMARY --------
+\section{Summary}
+\begin{itemize}[leftmargin=0in, label={}]
+  \item\normalsize{
+    Aspiring MIS Operations Executive with hands-on experience in MIS operations, data collection, analysis, reporting, KPI tracking, dashboard development, data validation, and report automation. Proven ability to support senior management decision-making through accurate, timely, and actionable MIS reports. Strong proficiency in Excel, databases, and BI dashboards, with experience working in fast-paced, cross-functional environments.
+  }
+\end{itemize}
+\vspace{-14pt}
+
+%-------- TECHNICAL SKILLS --------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+  \small\item{
+    \textbf{MIS \& Reporting :} Management Information System (MIS), MIS Operations, Daily / Weekly / Monthly MIS Reports, Senior Management Reporting, KPI Tracking \& Operational Metrics, Performance Monitoring, Decision-Making Support \\
+    \textbf{Data Management :} Data Collection \& Consolidation, Data Analysis \& Interpretation, Data Validation \& Reconciliation, Data Accuracy \& Integrity, Data Audits \& Quality Checks, Trend \& Pattern Identification \\
+    \textbf{Tools \& Technology :} Advanced Excel (Pivot Tables, Lookups, Automation), Google Sheets, SQL / MySQL, Power BI, Tableau, Looker Studio, Dashboard Development, Reporting Automation, Python (Reporting \& Automation)
+  }
+\end{itemize}
+\vspace{-14pt}
+
+%-------- WORK EXPERIENCE --------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Associate}{}
+    {Hurix Systems Private Limited, Chennai}{Nov 2025 - Present}
+  \resumeItemListStart
+    \resumeItem{Reviewed, organized, and labeled multimodal data (text, images, audio) using specialized tools to support AI and machine learning development.}
+    \resumeItem{Ensured data quality and consistency by following detailed guidelines and collaborating with technical teams to enhance overall model accuracy.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Data Analyst Intern}{}
+    {Unified Mentor Pvt. Ltd, Remote}{Jan 2025 - Mar 2025}
+  \resumeItemListStart
+    \resumeItem{Designed interactive dashboards and data models using Power BI, Tableau, and Python to track sales funnels, analyze campaign performance metrics, and identify opportunities to improve lead conversion rates. \href{https://github.com/arun8nov/Unified-Mentor-Intern-Projects}{\color{headingblue}\underline{GitHub}}}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {IT Support and Data Entry Executive}{}
+    {GodSend Technology, Virudhunagar}{Jun 2020 - Nov 2025}
+  \resumeItemListStart
+    \resumeItem{Performed accurate data entry and maintained organized records for billing, accounting and reporting systems using Excel}
+    \resumeItem{Provided IT support for computer systems and software while ensuring data consistency.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+%-------- PROJECTS --------
+\section{Projects}
+\resumeItemListStart
+
+  \resumeItem{\textbf{Productivity Tracking System}, Built and deployed a high-volume MIS-based attendance and productivity analytics solution at Hurix Systems Pvt. Ltd., handling 10,000+ daily records with automated data collection, validation, KPI dashboards, and real-time management insights. \href{}{\color{headingblue}\underline{}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{Employee Attrition \& Performance Prediction Dashboard}, Developed a Python and Streamlit–based MIS dashboard to track employee attrition trends and key HR metrics (salary, tenure, satisfaction), enabling management to identify risk patterns and support data-driven workforce planning. \href{https://github.com/arun8nov/Employee_Attrition}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{JioHotstar Ad Vision}, Developed an end-to-end data pipeline with MySQL and Python to capture ad occurrence data from sports videos and deliver interactive MIS dashboards and NL-based query reporting for brand visibility and performance tracking. \href{https://github.com/arun8nov/JioHotstar-Ad-Vision}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+  \resumeItem{\textbf{TN Rainfall Data Automation}, Developed an automated data pipeline for Tamil Nadu rainfall data collection, processing, and analysis. Implemented ETL workflows to handle large-scale meteorological datasets, enabling real-time weather pattern analysis and predictive insights for agricultural planning. \href{https://github.com/arun8nov/TN_RainfallData_Automation}{\color{headingblue}\underline{GitHub}}}
+  \vspace{-4pt}
+
+\resumeItemListEnd
+\vspace{-14pt}
+
+%-------- EDUCATION --------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Bachelor of Engineering in Electronics and Instrumentation}{2019}
+    {Sri Sairam Engineering College, Chennai}{}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+
+%-------- CERTIFICATIONS --------
+\section{Certifications}
+\begin{itemize}[leftmargin=0in, label={}]
+  \item\normalsize{
+    \textbf{Data Science Certified}, (GUVI – IIT-M RP) with practical analytics and ML expertise. \href{https://www.zenclass.in/certificateDownload/cQt5WRFi58FKT6Vf?download=true}{\color{headingblue}\underline{Link}}
+  }
+\end{itemize}
+
+\end{document}

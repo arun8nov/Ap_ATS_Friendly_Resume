@@ -278,12 +278,7 @@ if "final_latex" in st.session_state:
         c1, c2 = st.columns(2)
         with c1:
             st.download_button("⬇️ Download main.tex", data=final, file_name="main.tex", mime="text/plain", type="primary", use_container_width=True)
-        with c2:
-            if st.button("💾 Save as main.tex", use_container_width=True):
-                with open("main.tex", "w", encoding="utf-8") as f:
-                    f.write(final)
-                st.success("✅ Saved as main.tex!")
-
+       
     with tab2:
         st.code(assembled, language="latex")
         st.download_button("⬇️ Download Assembled", data=assembled, file_name="assembled.tex", mime="text/plain")
