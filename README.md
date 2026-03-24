@@ -1,5 +1,7 @@
 # 📄 AP ATS Friendly Resume Optimizer
 
+![AP ATS Friendly Resume Optimizer Banner](AP_Resume_image.png)
+
 An AI-powered resume optimizer that reads your Job Description and automatically tailors your LaTeX resume to pass ATS (Applicant Tracking System) filters — in under 2 minutes.
 
 ---
