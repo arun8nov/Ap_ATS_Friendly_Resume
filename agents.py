@@ -161,12 +161,14 @@ STRICT RULES:
 1. Return ONLY valid LaTeX code — no explanation, no markdown, no commentary
 2. Do NOT change the overall structure or layout
 3. Keep it to ONE page
-4. Ensure job title/headline matches the JD
-5. Verify all critical keywords are present
-6. Make it fully ATS parsable — no tables for critical info, no graphics for text
-7. Keep all section headers the same
-8. Do NOT add new sections
-9. Output must start with \\documentclass
+4. Make Summary Very Professinol donot start with Aspiring
+5. Donot reduce work experience
+5. Ensure job title/headline matches the JD
+6. Verify all critical keywords are present
+7. Make it fully ATS parsable — no tables for critical info, no graphics for text
+8. Keep all section headers the same
+9. Do NOT add new sections
+10. Output must start with \\documentclass
 """
 
     user_prompt = f"""JOB DESCRIPTION:
